@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/morphosis_Clinic/static/css/main.ee6b5095.css",
-    "main.js": "/morphosis_Clinic/static/js/main.c56d3018.js",
+    "main.js": "/morphosis_Clinic/static/js/main.0e9cb6f5.js",
     "static/js/453.96453769.chunk.js": "/morphosis_Clinic/static/js/453.96453769.chunk.js",
     "static/media/mansi.png": "/morphosis_Clinic/static/media/mansi.0f99929245332cc0e8a6.png",
     "static/media/yashasvi.png": "/morphosis_Clinic/static/media/yashasvi.54b3d06adf0f7c57f684.png",
@@ -14,13 +14,14 @@
     "static/media/coast.jpg": "/morphosis_Clinic/static/media/coast.b9568d22ed8ec784779b.jpg",
     "static/media/traffic.jpg": "/morphosis_Clinic/static/media/traffic.8feb7eef5e9d0a9df212.jpg",
     "static/media/bridge.jpg": "/morphosis_Clinic/static/media/bridge.dc7654d66ffa0a438c39.jpg",
+    "static/media/clinicLogo.jpg": "/morphosis_Clinic/static/media/clinicLogo.46fe22e33daf058ad90f.jpg",
     "index.html": "/morphosis_Clinic/index.html",
     "main.ee6b5095.css.map": "/morphosis_Clinic/static/css/main.ee6b5095.css.map",
-    "main.c56d3018.js.map": "/morphosis_Clinic/static/js/main.c56d3018.js.map",
+    "main.0e9cb6f5.js.map": "/morphosis_Clinic/static/js/main.0e9cb6f5.js.map",
     "453.96453769.chunk.js.map": "/morphosis_Clinic/static/js/453.96453769.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ee6b5095.css",
-    "static/js/main.c56d3018.js"
+    "static/js/main.0e9cb6f5.js"
   ]
 }
