@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import '../css/Section.css';
+import ClinicLogo from '../images/clinicLogo.jpg';
 
 export default function NavBar({ scrollToSection }) {
   const [scrolled, setScrolled] = useState(false);
@@ -29,8 +30,13 @@ export default function NavBar({ scrollToSection }) {
   return (
     <nav className={`navbar navbar-expand-lg fixed-top ${scrolled ? 'bg-transparent' : 'bg-white shadow'} transition-all`}>
       <div className="container-fluid">
-        <a className="navbar-brand mb-0 h1" href="#" style={{ fontFamily: "Eiko", fontWeight: "600" }}>
-          Morphosis Clinic
+        <a className="navbar-brand mb-0 h1 d-flex align-items-center" href="#">
+          <img 
+            src={ClinicLogo}
+            alt="Clinic Logo" 
+            style={{ height: "44px", width: "70px", marginRight: "10px" }} 
+          />
+          <span className="d-none d-lg-inline" style={{ fontFamily: "Eiko", fontWeight: "600", marginLeft: "10px" }}>Morphosis Clinic</span>
         </a>
         <button
           className="navbar-toggler"
