@@ -1,0 +1,35 @@
+.custom-carousel {
+  height: 100vh;       /* ✅ Full screen height */
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+
+.carousel-item {
+  height: 100vh;        /* ✅ Match section height */
+}
+
+.carousel-item img {
+  height: 100vh;        /* ✅ Match section height */
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  filter: brightness(0.75); /* Keeps navbar readable */
+}
+
+
+.custom-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  z-index: 10;
+  text-align: center;
+}
+
+
+.custom-caption h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}

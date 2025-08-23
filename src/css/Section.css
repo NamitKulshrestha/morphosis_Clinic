@@ -1,0 +1,406 @@
+General Section Styling
+.compartment {
+  padding: 4% 12%;
+}
+
+.heading {
+  font-family: "EIKO", serif;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: 0.5px;
+}
+
+.instrument-sans-custom {
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 400;
+  color: #222;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* ===== About Section ===== */
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.about-flex {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.about-heading {
+  flex: 1;
+  min-width: 200px;
+  text-align: left;
+}
+
+.about-heading h2 {
+  font-size: 4rem;
+  color: #000;
+}
+
+.about-text {
+  flex: 2;
+  min-width: 280px;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  text-align: justify;
+  padding-left: 2rem;
+  color: #333;
+}
+
+/* ABOUT SECTION */
+.about-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-heading {
+  flex: 1;
+  text-align: center;
+}
+
+.about-text {
+  flex: 2;
+}
+
+@media (max-width: 992px) {
+  .about-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-heading {
+    order: -1;            /* move heading above */
+    width: 100%;          /* full width so it shows */
+    margin-bottom: 1rem;
+    display: block;       /* ensure visibility */
+  }
+}
+
+
+/* DOCTORS SECTION */
+.doctors-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.doctors-cards {
+  flex: 2;
+}
+
+.doctors-heading {
+  flex: 1;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .doctors-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .doctors-heading {
+    order: -1; 
+    width: 100%;
+    /* margin-bottom: 1.5rem; */
+    margin-top: 0rem;
+    text-align: center;
+  }
+}
+
+/* Make sure headings don’t get hidden below navbar */
+#about, #doctors {
+  scroll-margin-top: 100px;
+}
+
+/* Keep heading at the top, centered */
+.about-heading,
+.doctors-heading {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  /* margin-bottom: 2rem;
+  margin-top: 2rem;   */
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ===== Doctors Section ===== */
+#doctors {
+  padding: 30px 20px;
+  background: #F8F9FAFF;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.doctors-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.doctors-heading {
+  flex: 1;
+  text-align: right;
+}
+
+.doctors-heading h2 {
+  font-size: 3.2rem;
+  color: #000;
+  margin-right: 1rem;
+  margin-top: 17rem;
+}
+
+.doctors-cards {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.doctors-cards .card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+}
+
+.doctors-cards .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.doctors-cards .card-img-top {
+  height: 9rem;
+  width: 9rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #948A55FF;
+}
+
+/* ===== Book Appointment Section ===== */
+#bookappointment {
+  background: #fff;
+  padding: 80px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+#bookappointment h2 {
+  font-size: 2.5rem;
+  color: #000;
+}
+
+#bookappointment button {
+  background-color: #948A55FF;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+#bookappointment button:hover {
+  background-color: #837A4BFF;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Gallery Section ===== */
+#gallery {
+  background-color: #F8F9FAFF;
+  padding: 80px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+#gallery h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+/* ===== Contact Section ===== */
+#contact {
+  background: #fff;
+  padding: 50px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact-details {
+  flex: 1;
+  min-width: 280px;
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+  margin-left: 3rem;
+}
+
+.map-container {
+  flex: 1;
+  min-width: 320px;
+  height: 350px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+#contact .heading {
+  margin-bottom: 5rem;
+}
+
+#contact h3 {
+  margin-left: 2rem;
+}
+
+.socialIcon {
+  margin-left: 1.8rem;
+  font-size: 1.8rem;
+}
+
+.socialMediaIcon {
+  margin-top: 4rem;
+}
+
+.contact-footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: #000;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .about-flex, .doctors-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text, .about-heading, .doctors-heading {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .doctors-cards .card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  #doctors h2, 
+  #bookappointment h2, #gallery h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  #bookappointment button {
+    width: 100%;
+  }
+}
+
+/* Prevent About heading from being hidden on small screens */
+@media (max-width: 621px) {
+  #about {
+    margin-top: 3rem; /* push the whole section down */
+  }
+
+  .about-heading {
+    margin-top: 1.5rem; /* ensure heading always visible */
+    text-align: center; /* keep it centered like BookAppointment */
+  }
+}
+
+@media (max-width: 576px) {
+  #about {
+    margin-top: 3rem; /* push the whole section down */
+  }
+
+  #about h2 {
+    font-size: 2rem; /* slightly smaller */
+    margin-top: 1.5rem; /* ensure heading always visible */
+    text-align: center; /* keep it centered like BookAppointment */
+  }
+}
+
+@media (max-width: 521px) {
+  #about h2 {
+    font-size: 2rem; 
+    margin-top: 10rem; 
+    margin-bottom: 0px;
+    text-align: center; 
+  }
+}
+
+@media (max-width: 458px) {
+  #about h2 {
+    font-size: 2rem; 
+    margin-top: 20rem; 
+    margin-bottom: 0px;
+    text-align: center; 
+  }
+}
+
+@media (max-width: 399px) {
+  #about h2 {
+    font-size: 2rem; 
+    margin-top: 30rem; 
+    margin-bottom: 0px;
+    text-align: center; 
+  }
+}
