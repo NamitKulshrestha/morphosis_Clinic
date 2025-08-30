@@ -72,23 +72,6 @@ General Section Styling
   color: #333;
 }
 
-/* ABOUT SECTION */
-.about-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-}
-
-.about-heading {
-  flex: 1;
-  text-align: center;
-}
-
-.about-text {
-  flex: 2;
-}
-
 @media (max-width: 992px) {
   .about-flex {
     flex-direction: column;
@@ -132,15 +115,9 @@ General Section Styling
   .doctors-heading {
     order: -1; 
     width: 100%;
-    /* margin-bottom: 1.5rem; */
     margin-top: 0rem;
     text-align: center;
   }
-}
-
-/* Make sure headings don’t get hidden below navbar */
-#about, #doctors {
-  scroll-margin-top: 100px;
 }
 
 /* Keep heading at the top, centered */

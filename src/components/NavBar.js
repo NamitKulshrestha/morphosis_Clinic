@@ -34,9 +34,10 @@ export default function NavBar({ scrollToSection }) {
           <img 
             src={ClinicLogo}
             alt="Clinic Logo" 
+            onClick={() => scrollToSection('welcome')}
             style={{ height: "44px", width: "70px", marginRight: "10px" }} 
           />
-          <span className="d-none d-lg-inline" style={{ fontFamily: "Eiko", fontWeight: "600", marginLeft: "10px" }}>Morphosis Clinic</span>
+          <span className="d-none d-lg-inline" style={{ fontFamily: "Eiko", fontWeight: "600", marginLeft: "10px" }} onClick={() => scrollToSection('welcome')}>Morphosis Clinic</span>
         </a>
         <button
           className="navbar-toggler"
@@ -56,7 +57,13 @@ export default function NavBar({ scrollToSection }) {
                 <a
                   className="nav-link"
                   href="#"
-                  onClick={() => scrollToSection(section)}
+                  onClick={() => {
+                    scrollToSection(section);
+                    const navbar = document.getElementById("navbarNavAltMarkup");
+                    if (navbar.classList.contains("show")) {
+                      navbar.classList.remove("show"); // just remove the open class
+                    }
+                  }}
                   style={{ fontFamily: "instrument-sans-custom", fontSize: "1.2rem" }}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}

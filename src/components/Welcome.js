@@ -26,20 +26,30 @@ export default function Welcome() {
   );
 
   return (
-    <div className="custom-carousel">
-      <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src={Image_1} className="d-block w-100" alt="Clinic Interior" />
-            {caption}
-          </div>
-          <div className="carousel-item">
-            <img src={Image_2} className="d-block w-100" alt="Modern Equipment" />
-            {caption}
-          </div>
-          <div className="carousel-item">
-            <img src={Image_3} className="d-block w-100" alt="Clinic Services" />
-            {caption}
+    <div>
+      {/* 🔹 Announcement Bar */}
+      <div className="announcement-bar">
+        <div className="announcement-text">
+          <span>✨ Now open on Sundays • Special discounts this week • Book your appointment today! ✨</span>
+        </div>
+      </div>
+
+      {/* 🔹 Carousel Section */}
+      <div className="custom-carousel">
+        <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img src={Image_1} className="d-block w-100" alt="Clinic Interior" />
+              {caption}
+            </div>
+            <div className="carousel-item">
+              <img src={Image_2} className="d-block w-100" alt="Modern Equipment" />
+              {caption}
+            </div>
+            <div className="carousel-item">
+              <img src={Image_3} className="d-block w-100" alt="Clinic Services" />
+              {caption}
+            </div>
           </div>
         </div>
       </div>

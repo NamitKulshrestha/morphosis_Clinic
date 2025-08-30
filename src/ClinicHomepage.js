@@ -8,7 +8,7 @@ import BookAppointment from "./components/BookAppointment";
 import Welcome from "./components/Welcome";
 
 import './css/Section.css';
-import './css/FullPageScroll.css'; // renamed or same as homepage.css
+import './css/FullPageScroll.css'; 
 import FadeInSection from "./FadeInSection";
 
 export default function App() {

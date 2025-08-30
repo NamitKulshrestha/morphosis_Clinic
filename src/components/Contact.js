@@ -44,7 +44,7 @@ export default function Contact() {
               Mon-Fri: 9am - 6pm
             </li>
           </ul>
-          <a href="https://www.instagram.com/morphosisclinic/" target="_blank" rel="noopener noreferrer" className="socialIcon">
+          <a href="https://www.instagram.com/morphosis_0/" target="_blank" rel="noopener noreferrer" className="socialIcon">
             <FontAwesomeIcon icon={faInstagramSquare} style={{ color: "#a49a5f" }} className="socialMediaIcon" />
           </a>
           <a href="https://www.facebook.com/morphosisclinic/" target="_blank" rel="noopener noreferrer" className="socialIcon">
