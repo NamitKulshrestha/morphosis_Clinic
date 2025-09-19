@@ -52,7 +52,7 @@ export default function NavBar({ scrollToSection }) {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul className="navbar-nav ms-auto">
-            {['about', 'doctors', 'bookAppointment', 'gallery', 'contact'].map((section, index) => (
+            {['about', 'doctors', 'treatments', 'bookAppointment', 'gallery', 'contact'].map((section, index) => (
               <li className="nav-item" key={index}>
                 <a
                   className="nav-link"

@@ -10,6 +10,7 @@ import Welcome from "./components/Welcome";
 import './css/Section.css';
 import './css/FullPageScroll.css'; 
 import FadeInSection from "./FadeInSection";
+import Treatments from "./components/Treatment";
 
 export default function App() {
   const scrollToSection = (id) => {
@@ -36,6 +37,10 @@ export default function App() {
 
         <div id="doctors" className="snap-section">
           <FadeInSection><Doctors /></FadeInSection>
+        </div>
+
+        <div id="treatments" className="snap-section">
+          <FadeInSection><Treatments /></FadeInSection>
         </div>
 
         <div id="bookAppointment" className="snap-section">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";  // ⬅️ add useEffect + useState
 import '../css/Welcome.css';
 import '../css/Section.css';
 import Image_1 from '../images/interior1.jpg';
@@ -6,6 +6,17 @@ import Image_2 from '../images/interior2.jpg';
 import Image_3 from '../images/interior3.jpg';
 
 export default function Welcome() {
+  const [announcement, setAnnouncement] = useState("");  // ⬅️ state for announcement
+
+  useEffect(() => {
+    fetch("http://localhost:4000/announcement")   // ⬅️ fetch from admin backend
+      .then((res) => res.json())
+      .then((data) => {
+        setAnnouncement(data.text || "");
+      })
+      .catch((err) => console.error("Error fetching announcement:", err));
+  }, []);
+
   const scrollToAppointment = () => {
     const section = document.getElementById('bookAppointment');
     if (section) {
@@ -28,11 +39,13 @@ export default function Welcome() {
   return (
     <div>
       {/* 🔹 Announcement Bar */}
-      <div className="announcement-bar">
-        <div className="announcement-text">
-          <span>✨ Now open on Sundays • Special discounts this week • Book your appointment today! ✨</span>
+      {announcement && (   /* ⬅️ show only if announcement exists */
+        <div className="announcement-bar">
+          <div className="announcement-text">
+            <span>{announcement}</span>   {/* ⬅️ dynamic announcement */}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* 🔹 Carousel Section */}
       <div className="custom-carousel">
