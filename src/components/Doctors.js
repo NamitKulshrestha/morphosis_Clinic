@@ -9,10 +9,12 @@ export default function Doctors() {
     {
       name: "Dr. Mansi",
       image: MansiImage,
+      about: "Dr. Mansi Choubey is a compassionate and dedicated healthcare professional, committed to providing personalized care to every patient. With specialized training in cosmetology and trichology, she offers a wide range of advanced treatments for skin and hair concerns. Her expertise covers all types of skin rejuvenation, acne care, scar management, pigmentation solutions, hair restoration, and PRP therapies. Along with aesthetic care, she also focuses on women’s health issues, ensuring holistic wellness for her patients.Driven by her passion for patient satisfaction and visible results, Dr. Mansi blends medical knowledge with the latest technology to deliver safe, effective, and tailored treatments."
     },
     {
       name: "Dr. Yashasvi",
       image: YashasviImage,
+      about: "Dr. Yashasvi is a highly skilled and experienced dermatologist, known for his expertise in treating a wide range of skin conditions. He is dedicated to helping his patients achieve healthy, beautiful skin through personalized treatment plans and the latest advancements in dermatology."
     },
   ];
 
@@ -31,10 +33,8 @@ export default function Doctors() {
               />
               <div className="card-body">
                 <h5 className="heading">{doctor.name}</h5>
-                <p className="instrument-sans-custom">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit. Amet consectetur adipiscing elit
-                  quisque faucibus ex sapien. Quisque faucibus ex sapien vitae pellentesque sem placerat.
-                  Vitae pellentesque sem placerat in id cursus mi.
+                <p className="instrument-sans-custom" style={{ textAlign: "justify" }}>
+                  {doctor.about}
                 </p>
               </div>
             </div>

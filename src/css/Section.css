@@ -383,85 +383,172 @@ General Section Styling
 }
 
 /* ===== Treatment Section ===== */
+/* ===== Treatment Section (two-column + accordion) ===== */
 #treatment {
   background: #fff;
-  padding: 80px 20px;
+  padding: 60px 0; /* vertical padding, horizontal controlled by compartment */
   border-radius: 20px;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
   margin-top: 60px;
 }
 
+/* Centering and horizontal margin so it visually sits well in page */
 .treatment-container {
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 1100px;      /* content width */
+  margin: 0 auto;         /* center on page */
+  padding: 0 2.5rem;      /* left/right breathing room */
 }
 
+/* Two-column layout on desktop */
 .treatment-flex {
   display: flex;
-  gap: 40px;
+  gap: 32px;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap; /* makes it stack on small screens */
+  flex-wrap: nowrap;      /* keep columns side-by-side until breakpoint */
 }
 
+/* Each column card */
 .treatment-block {
-  flex: 1;
+  flex: 0 0 48%;          /* 48% width each (two columns) */
   min-width: 320px;
   background: #fdfdfd;
-  padding: 25px 30px;
+  padding: 24px;
   border-radius: 16px;
   border: 1px solid #eee;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.treatment-block:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
+/* heading/subheading */
 #treatment .heading {
   text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 3rem;
+  font-size: 2.6rem;
+  margin-bottom: 2.2rem;
 }
 
 .subheading {
   font-family: "EIKO", serif;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
   color: #000;
 }
 
-.treatment-list {
-  list-style: none;
-  padding-left: 0;
-  line-height: 1.9;
+/* ===== Accordion styles ===== */
+.accordion-item {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 8px;
 }
 
-.treatment-list li {
-  margin-bottom: 10px;
-  padding-left: 1.5rem;
-  position: relative;
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  font-size: 1.05rem;
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 600;
+  padding: 12px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.25s ease;
+  color: #222;
 }
 
-.treatment-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
+.accordion-header:hover {
   color: #948A55FF;
-  font-size: 1.3rem;
-  line-height: 1;
 }
 
-/* Responsive: stack columns */
+.accordion-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-left: 12px;
+}
+
+/* animated collapse using max-height */
+.accordion-content-wrapper {
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  max-height: 0;
+  padding-top: 0;
+}
+
+.accordion-item.open .accordion-content-wrapper {
+  max-height: 800px; /* sufficiently large to show content */
+  padding-top: 10px;
+}
+
+.accordion-content {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* small visual emphasis when open */
+.accordion-item.open .accordion-header {
+  color: #948A55FF;
+}
+
+/* subtle hover/interaction for blocks */
+.treatment-block:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* ===== Responsive: stack columns on small screens ===== */
 @media (max-width: 992px) {
+  .treatment-container {
+    padding: 0 1.25rem; /* reduce horizontal padding on smaller screens */
+  }
+
   .treatment-flex {
     flex-direction: column;
-    text-align: center;
+    gap: 20px;
   }
 
   .treatment-block {
-    margin-bottom: 2rem;
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  #treatment .heading {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+
+/* Mobile Navbar Styling */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.95); /* frosted white */
+    backdrop-filter: blur(8px);            /* glassy effect */
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 0.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .navbar-nav .nav-link {
+    color: #222 !important;  
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #948A55FF !important; /* gold accent on hover */
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
   }
 }
